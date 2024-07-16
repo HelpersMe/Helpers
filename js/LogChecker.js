@@ -12,6 +12,7 @@ function checker(){
 	othersProfiles = []
 	accountDisabledProfiles = []
 	proxyDownProfiles = []
+	notLogs = []
 	const profilesValue = Profiles.value
 	const logsValue = Logs.value
 
@@ -26,45 +27,60 @@ function checker(){
 		for (var i = 0; i < logsArr.length; i++) {
 			log = logsArr[i]
 			log = log.toLowerCase()
-			logArr = getArraySplited(log, "update_status : ")
-			log = logArr[logArr.length-1]
-			logArr = getArraySplited(log," ; ")
-			log = logArr[logArr.length-1]
 			
-			switch (log) {
-				case "connected":
-					connectedProfiles.push(profilesArr[i])
-					break;
-				case "active":
-					connectedProfiles.push(profilesArr[i])
-					break;
-				case "max_execution_time":
-					maxExecutionTimeProfiles.push(profilesArr[i])
-					break;
-				case "account_restricted":
-					accountRestrictedProfiles.push(profilesArr[i])
-					break;
-				case "captcha_verification":
-					captchaVerificationProfiles.push(profilesArr[i])
-					break;
-				case "wrong_password":
-					wrongPasswordProfiles.push(profilesArr[i])
-					break;
-				case "phone_number":
-					phoneNumberProfiles.push(profilesArr[i])
-					break;
-				case "unusual_activity":
-					unusualActivityProfiles.push(profilesArr[i])
-					break;
-				case "account_disabled":
-					othersProfiles.push(profilesArr[i])
-					break;
-				case "others":
-					accountDisabledProfiles.push(profilesArr[i])
-					break;
-				default:
-					proxyDownProfiles.push(profilesArr[i])
-					break;
+			if (log == '') {
+				notLogs.push(profilesArr[i])
+			} else if (log == 'matched') {
+				connectedProfiles.push(profilesArr[i])
+			} else if (log.split("proxy down").length>1 && log.split("proxy down")[log.split("proxy down").length-1] == '') {
+				proxyDownProfiles.push(profilesArr[i])
+			} else {
+				logArr = getArraySplited(log, "update_status : ")
+				log = logArr[logArr.length-1]
+				logArr = getArraySplited(log," ; ")
+				log = logArr[logArr.length-1]
+				
+				switch (log) {
+					case "connected":
+						connectedProfiles.push(profilesArr[i])
+						break;
+					case "active":
+						connectedProfiles.push(profilesArr[i])
+						break;
+					case "matched":
+						connectedProfiles.push(profilesArr[i])
+						break;
+					case "max_execution_time":
+						maxExecutionTimeProfiles.push(profilesArr[i])
+						break;
+					case "account_restricted":
+						accountRestrictedProfiles.push(profilesArr[i])
+						break;
+					case "captcha_verification":
+						captchaVerificationProfiles.push(profilesArr[i])
+						break;
+					case "wrong_password":
+						wrongPasswordProfiles.push(profilesArr[i])
+						break;
+					case "phone_number":
+						phoneNumberProfiles.push(profilesArr[i])
+						break;
+					case "unusual_activity":
+						unusualActivityProfiles.push(profilesArr[i])
+						break;
+					case "account_disabled":
+						accountDisabledProfiles.push(profilesArr[i])
+						break;
+					case "proxy down":
+						proxyDownProfiles.push(profilesArr[i])
+						break;
+					case "others":
+						othersProfiles.push(profilesArr[i])
+						break;
+					default:
+						othersProfiles.push(profilesArr[i])
+						break;
+				}
 			}
 		}
 		
@@ -78,6 +94,7 @@ function checker(){
 		console.log(othersProfiles)
 		console.log(accountDisabledProfiles)
 		console.log(proxyDownProfiles)
+		console.log(notLogs)
 	}
 }
 
