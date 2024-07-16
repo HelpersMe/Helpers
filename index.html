@@ -45,7 +45,9 @@
 
 	<script>
 		const hideThis = document.getElementById('loom-companion-mv3')
-		hideThis.setAttribute('style','display:none')
+		if (hideThis != null) {
+		    hideThis.setAttribute('style','display:none')
+		}
 	</script>
 </body>
 </html>
