@@ -27,9 +27,6 @@ function Diviseur() {
 			sortAll.push(profilesTagArr)
 		}
 
-		profilesArr.sort((a, b) => a - b);
-		sortAll.sort((a, b) => a[0] - b[0]);
-
 		const filteredArr = sortAll.filter(item => profilesArr.includes(item[0]));
 
 	    const profilesArray = [];
