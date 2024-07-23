@@ -16,6 +16,18 @@ const accountDisabled = document.getElementById('accountDisabled')
 const proxyDown = document.getElementById('proxyDown')
 const notLogs = document.getElementById('notLogs')
 
+const totalConnected = document.getElementById('totalConnected')
+const totalProxyDown = document.getElementById('totalProxyDown')
+const totalMaxExecutionTime = document.getElementById('totalMaxExecutionTime')
+const totalAccountRestricted = document.getElementById('totalAccountRestricted')
+const totalCaptchaVerification = document.getElementById('totalCaptchaVerification')
+const totalWrongPassword = document.getElementById('totalWrongPassword')
+const totalPhoneNumber = document.getElementById('totalPhoneNumber')
+const totalUnusualActivity = document.getElementById('totalUnusualActivity')
+const totalAccountDisabled = document.getElementById('totalAccountDisabled')
+const totalNotLog = document.getElementById('totalNotLog')
+const totalOthers = document.getElementById('totalOthers')
+
 connectedProfiles = []
 maxExecutionTimeProfiles = []
 accountRestrictedProfiles = []
@@ -113,6 +125,18 @@ function checker(){
 		accountDisabled.value=arrayToString(accountDisabledProfiles)
 		proxyDown.value=arrayToString(proxyDownProfiles)
 		notLogs.value=arrayToString(notLogsProfiles)
+
+		totalConnected.innerText = connectedProfiles.length
+		totalMaxExecutionTime.innerText = maxExecutionTimeProfiles.length
+		totalAccountRestricted.innerText = accountRestrictedProfiles.length
+		totalCaptchaVerification.innerText = captchaVerificationProfiles.length
+		totalWrongPassword.innerText = wrongPasswordProfiles.length
+		totalPhoneNumber.innerText = phoneNumberProfiles.length
+		totalUnusualActivity.innerText = unusualActivityProfiles.length
+		totalOthers.innerText = othersProfiles.length
+		totalAccountDisabled.innerText = accountDisabledProfiles.length
+		totalProxyDown.innerText = proxyDownProfiles.length
+		totalNotLog.innerText = notLogsProfiles.length
 	}
 }
 
