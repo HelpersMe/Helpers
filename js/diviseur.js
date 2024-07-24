@@ -7,6 +7,12 @@ const RdpsInEntity = document.getElementById('RdpsInEntity')
 const AllDivisuerRdpsInEntity = document.getElementById('AllDivisuerRdpsInEntity')
 
 function Diviseur(id) {
+    const result_cheker = document.getElementById(`result_${id}`)
+    console.log(result_cheker != null);
+    if (result_cheker != null) {
+        result_cheker.innerHTML = ''
+    }
+
 	const Profiles = document.getElementById(`Profiles_${id}`)
 	const All = document.getElementById(`All_${id}`)
 	const profilesValue = Profiles.value
