@@ -200,3 +200,88 @@ function generateZip() {
             document.body.removeChild(a);
         });
 }
+
+function getProfiles() {
+ 	const entityName = Entity.value;
+    const dropsValue = Drops.value;
+    const rdpsValue = Rdps.value;
+
+    textareasContents = [];
+
+    // Loop through drops and rdps to gather textarea contents
+    for (let i = 0; i < rdpsValue; i++) {
+        let textareaContentRdp = []
+        for (let j = 0; j < dropsValue; j++) {
+            const textarea = document.getElementById(`${entityName}_Rdp${i + 1}_${j + 1}_Profiles`);
+            const textareaValue = textarea.value;
+            textareaContentRdp.push(textareaValue)
+        }
+        textareasContents.push(textareaContentRdp)
+    }
+    let rdps = ""
+
+    for (var i = 0; i < textareasContents.length; i++) {
+        array = textareasContents[i]
+        rdps += `RDP${i + 1}` + '\t'
+    }
+    rdps += "\n"
+
+
+    const maxColumns = Math.max(...textareasContents.map(row => row.length));
+    const transformedArray = Array.from({ length: maxColumns }, () => []);
+
+    let index = 0;
+    let result = [];
+    while (index < textareasContents[0].length) {
+        textareasContents.forEach((row, i) => {
+            if (!result[i]) {
+                result[i] = [];
+            }
+            result[i].push(row[index]);
+        });
+        index++;
+    }
+
+    for (let i = 0; i < result.length; i++) {
+        result[i] = result[i].join('\n\n').split('\n');
+    }
+
+    let max = result[0].length;
+    for (let i = 1; i < result.length; i++) {
+        if (result[i].length > max) {
+            max = result[i].length;
+        }
+    }
+
+    index = 0;
+    let result2 = [];
+    while (index < max) {
+        result.forEach((row, i) => {
+            if (!result2[i]) {
+                result2[i] = [];
+            }
+            result2[i].push(row[index]);
+        });
+        index++;
+    }
+
+    let profilesByDrop = fusionnerTableaux(result2)
+
+    let allData = rdps + profilesByDrop;
+
+    // Create a Blob from the data
+    let blob = new Blob([allData], { type: 'text/csv' });
+
+    // Create a download link
+    let link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${entityName}_profiles_drop.xls`;  // Set desired file name here
+    link.style.display = 'none';
+    document.body.appendChild(link);
+
+    // Trigger the download by simulating a click on the link
+    link.click();
+
+    // Clean up
+    document.body.removeChild(link);
+}

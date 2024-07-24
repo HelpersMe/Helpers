@@ -9,7 +9,7 @@ function getArraySplited (inputValue, seperateur){
 function arrayToString(array,seperateur = "\n") {
 	string = ""
 	for (var i = 0; i < array.length; i++) {
-		if (i == array.length-1) {
+		if (i == array.length-1) {	
 			string += array[i]
 		} else {
 			string += array[i] + seperateur
@@ -91,4 +91,25 @@ function downloadFile(content, fileName, contentType) {
     a.href = URL.createObjectURL(file);
     a.download = fileName;
     a.click();
-}		
+}	
+
+function fusionnerTableaux(tableaux) {
+            let resultat = '';
+        
+            let longueurMax = Math.max(...tableaux.map(t => t.length));
+        
+            for (let i = 0; i < longueurMax; i++) {
+                let ligne = '';
+                for (let j = 0; j < tableaux.length; j++) {
+                    if (tableaux[j][i] !== undefined) {
+                        ligne += tableaux[j][i];
+                    }
+                    if (j < tableaux.length - 1) {
+                        ligne += '\t';
+                    }
+                }
+                resultat += ligne + '\n';
+            }
+        
+            return resultat;
+        }	
