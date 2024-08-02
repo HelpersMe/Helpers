@@ -1,3 +1,12 @@
+function viderConsole() {
+    console.clear();
+}
+
+// Vider la console au chargement de la page
+window.onload = function() {
+    viderConsole();
+};
+
 document.body.setAttribute('oncontextmenu','return false')
 document.onkeydown = (e) => {
     if (e.key == 123) {
