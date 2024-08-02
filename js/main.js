@@ -1,10 +1,29 @@
-function viderConsole() {
-    console.clear();
-}
+(function() {
+    var oldConsoleClear = console.clear;
+    console.clear = function() {
+        // Sauvegarder les méthodes d'écriture de la console
+        var oldConsoleLog = console.log;
+        var oldConsoleWarn = console.warn;
+        var oldConsoleError = console.error;
+        var oldConsoleInfo = console.info;
 
-// Vider la console au chargement de la page
+        // Redéfinir les méthodes d'écriture de la console pour les désactiver temporairement
+        console.log = console.warn = console.error = console.info = function() {};
+
+        // Appeler la méthode native clear
+        oldConsoleClear.apply(console, arguments);
+
+        // Restaurer les méthodes d'écriture de la console
+        console.log = oldConsoleLog;
+        console.warn = oldConsoleWarn;
+        console.error = oldConsoleError;
+        console.info = oldConsoleInfo;
+    };
+})();
+
+// Vider la console au chargement de la page et ensuite toutes les secondes
 window.onload = function() {
-    viderConsole();
+    console.clear(); // Vider la console au chargement de la page
 };
 
 document.body.setAttribute('oncontextmenu','return false')
