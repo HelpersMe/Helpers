@@ -97,26 +97,26 @@ function innerHtmlMulti(numberOfDepot,id,value,type) {
 function innerHTMLRdps(entityName, numberOfRdp) {
 	numberOfRdp++
 	const innerBtn = `<div class="d-flex justify-content-center gap-3 my-2">
-		<button type="button" onclick="show('${entityName}_Rdp${numberOfRdp}')" id="show_${entityName}_RDP${numberOfRdp}" class="btn btn-warning">${entityName} Rdp${numberOfRdp}</button>
+		<button type="button" onclick="show('${entityName}_RDP${numberOfRdp}')" id="show_${entityName}_RDP${numberOfRdp}" class="btn btn-warning">${entityName} Rdp${numberOfRdp}</button>
 	</div>`
-	const innerDiviser = `<div class="AllDivisuerRdpsInEntity" id="${entityName}_Rdp${numberOfRdp}" style="display: none !important;">
-		<span class="d-flex w-100 justify-content-center">${entityName}_Rdp${numberOfRdp}</span><br>
+	const innerDiviser = `<div class="AllDivisuerRdpsInEntity" id="${entityName}_RDP${numberOfRdp}" style="display: none !important;">
+		<span class="d-flex w-100 justify-content-center">${entityName}_RDP${numberOfRdp}</span><br>
 		<div class="d-flex justify-content-evenly flex-wrap">
 			<div>
 			  <label for="Profiles">Profiles Connected</label>
-			  <textarea class="form-control" placeholder="Leave a Profiles Connected here" id="Profiles_${entityName}_Rdp${numberOfRdp}"></textarea>
+			  <textarea class="form-control" placeholder="Leave a Profiles Connected here" id="Profiles_${entityName}_RDP${numberOfRdp}"></textarea>
 			</div>
 
 			<div>
 			  <label for="All">All Profiles + All Tags</label>
-			  <textarea class="form-control" placeholder="Leave a All Profiles + All Tags here" id="All_${entityName}_Rdp${numberOfRdp}"></textarea>
+			  <textarea class="form-control" placeholder="Leave a All Profiles + All Tags here" id="All_${entityName}_RDP${numberOfRdp}"></textarea>
 			</div>
 		</div>
 
 		<div class="d-flex justify-content-center gap-3 my-2">
-			<button type="button" onclick="Diviseur('${entityName}_Rdp${numberOfRdp}')" id="diviseur_${entityName}_RDP${numberOfRdp}" class="btn btn-info">Diviseur</button>
+			<button type="button" onclick="Diviseur('${entityName}_RDP${numberOfRdp}')" id="diviseur_${entityName}_RDP${numberOfRdp}" class="btn btn-info">Diviseur</button>
 		</div>
-		<div class="d-flex justify-content-evenly flex-wrap gap-3 container" id="result_${entityName}_Rdp${numberOfRdp}"></div>
+		<div class="d-flex justify-content-evenly flex-wrap gap-3 container" id="result_${entityName}_RDP${numberOfRdp}"></div>
 	</div>`
 	RdpsInEntity.innerHTML += innerBtn 
 	AllDivisuerRdpsInEntity.innerHTML += innerDiviser 
@@ -173,7 +173,7 @@ function generateZip() {
     for (let i = 0; i < dropsValue; i++) {
         let textareaContent = '';
         for (let j = 0; j < rdpsValue; j++) {
-            const textarea = document.getElementById(`${entityName}_Rdp${j + 1}_${i + 1}_Tags`);
+            const textarea = document.getElementById(`${entityName}_RDP${j + 1}_${i + 1}_Tags`);
             const textareaValue = textarea.value;
             const textareaValueArr = textareaValue.split("\n");
             const textareaContentJoined = textareaValueArr.join(separatorValue);
@@ -218,7 +218,7 @@ function getProfiles() {
     for (let i = 0; i < rdpsValue; i++) {
         let textareaContentRdp = []
         for (let j = 0; j < dropsValue; j++) {
-            const textarea = document.getElementById(`${entityName}_Rdp${i + 1}_${j + 1}_Profiles`);
+            const textarea = document.getElementById(`${entityName}_RDP${i + 1}_${j + 1}_Profiles`);
             const textareaValue = textarea.value;
             textareaContentRdp.push(textareaValue)
         }
