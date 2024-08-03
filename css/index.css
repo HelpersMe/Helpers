@@ -16,6 +16,9 @@ html {
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
 }
+body{
+    overflow-y: hidden !important;
+}
 h1,
 h2,
 h3,
