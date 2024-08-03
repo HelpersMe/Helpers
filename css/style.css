@@ -3,3 +3,7 @@ textarea{
     resize: none;
     min-width: 300px
 }
+body{
+    height: 100vh;
+    overflow-y: visible;
+}
