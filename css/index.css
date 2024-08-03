@@ -233,7 +233,7 @@ p{
 
 /* ==== General styles ==== */
 section{
-	height: 600px;
+	height: 100% !important;
 	padding: 3rem 0;
 	position: relative;
 }
