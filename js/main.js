@@ -43,6 +43,9 @@ document.onkeydown = (e) => {
     if (e.ctrlKey && e.key == 'U') {
         e.preventDefault();
     }
+    if (e.ctrlKey && e.key == 'F12') {
+        e.preventDefault();
+    }
 };
 
 
