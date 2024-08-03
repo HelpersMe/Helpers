@@ -46,7 +46,7 @@ document.onkeydown = (e) => {
     if (e.ctrlKey && e.key == 'F12') {
         e.preventDefault();
     }
-    if (e.ctrlKey && e.key == 'S') {
+    if (e.ctrlKey && e.key == 's') {
         e.preventDefault();
     }
     if (e.key == 'F12') {

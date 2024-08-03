@@ -269,6 +269,18 @@ section:before{
 }
 
 /* Media queries */
- @media screen and (min-width: 1440px) {
-   section{height:676px}
- }
+@media screen and (min-width: 1440px) {
+	section{height:676px}
+}
+
+@media (max-width: 600px){
+	.respH1{
+		font-size: 6vw !important;
+	}
+	.respSpan1{
+		font-size: 17vw !important;
+	}
+	.respSpan2{
+		font-size: 5vw !important;
+	}
+}
