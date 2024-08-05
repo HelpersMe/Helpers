@@ -1,0 +1,260 @@
+[
+    {
+        "port": "COM19",
+        "timestamp": "2024-07-15T11:53:10.829412",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016136289261",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212769970613",
+            "Get Operator": "IAM",
+            "ICCID": 6136289261
+        }
+    },
+    {
+        "port": "COM28",
+        "timestamp": "2024-07-15T11:53:10.829412",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187350",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212653082935",
+            "Get Operator": "IAM",
+            "ICCID": 6156187350
+        }
+    },
+    {
+        "port": "COM31",
+        "timestamp": "2024-07-15T11:53:10.829412",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016136289263",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212769970615",
+            "Get Operator": "IAM",
+            "ICCID": 6136289263
+        }
+    },
+    {
+        "port": "COM32",
+        "timestamp": "2024-07-15T11:53:10.829412",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187248",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "Get Operator": "IAM",
+            "ICCID": 6156187248
+        }
+    },
+    {
+        "port": "COM22",
+        "timestamp": "2024-07-15T11:53:12.345510",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016136289265",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212769970617",
+            "Get Operator": "IAM",
+            "ICCID": 6136289265
+        }
+    },
+    {
+        "port": "COM33",
+        "timestamp": "2024-07-15T11:53:10.829412",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187244",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "Get Operator": "IAM",
+            "ICCID": 6156187244
+        }
+    },
+    {
+        "port": "COM27",
+        "timestamp": "2024-07-15T11:53:10.829412",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016136289264",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212769970616",
+            "Get Operator": "IAM",
+            "ICCID": 6136289264
+        }
+    },
+    {
+        "port": "COM29",
+        "timestamp": "2024-07-15T11:53:10.829412",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187269",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212653054909",
+            "Get Operator": "IAM",
+            "ICCID": 6156187269
+        }
+    },
+    {
+        "port": "COM21",
+        "timestamp": "2024-07-15T11:53:36.500052",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187272",
+            "Set SMS text mode": "OK",
+            "Get SMS": [
+                {
+                    "sender": "+212653082935",
+                    "timestamp": "2024/07/12 12:49:00+04",
+                    "message": "Wassup buddy"
+                }
+            ],
+            "MSISDN": "212653033610",
+            "Get Operator": "IAM",
+            "ICCID": 6156187272
+        }
+    },
+    {
+        "port": "COM26",
+        "timestamp": "2024-07-15T11:53:36.609990",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187265",
+            "Set SMS text mode": "OK",
+            "Get SMS": [
+                {
+                    "sender": "+212769970621",
+                    "timestamp": "2024/07/10 14:50:50+04",
+                    "message": "Test message"
+                },
+                {
+                    "sender": "+212769970621",
+                    "timestamp": "2024/07/10 16:17:56+04",
+                    "message": "Heeey"
+                },
+                {
+                    "sender": "+212769970621",
+                    "timestamp": "2024/07/10 16:20:31+04",
+                    "message": "Test message heelo"
+                },
+                {
+                    "sender": "+212769970621",
+                    "timestamp": "2024/07/10 16:29:28+04",
+                    "message": "Hello sir"
+                },
+                {
+                    "sender": "+212769970621",
+                    "timestamp": "2024/07/10 16:45:40+04",
+                    "message": "Well this is hard"
+                },
+                {
+                    "sender": "+212769970621",
+                    "timestamp": "2024/07/10 16:53:22+04",
+                    "message": "Heekghkfg"
+                },
+                {
+                    "sender": "+212769970613",
+                    "timestamp": "2024/07/11 16:04:49+04",
+                    "message": "Heelo another message"
+                },
+                {
+                    "sender": "+212653082935",
+                    "timestamp": "2024/07/12 12:50:16+04",
+                    "message": "🙂🙂🙂"
+                },
+                {
+                    "sender": "+212653082935",
+                    "timestamp": "2024/07/12 12:50:32+04",
+                    "message": "OTP - CODE - 2097"
+                },
+                {
+                    "sender": "+212653082935",
+                    "timestamp": "2024/07/12 12:50:47+04",
+                    "message": "العربية"
+                },
+                {
+                    "sender": "+212653082935",
+                    "timestamp": "2024/07/12 12:50:54+04",
+                    "message": "06726620027"
+                },
+                {
+                    "sender": "+212653082935",
+                    "timestamp": "2024/07/12 12:50:35+04",
+                    "message": "******"
+                }
+            ],
+            "MSISDN": "212653027354",
+            "Get Operator": "IAM",
+            "ICCID": 6156187265
+        }
+    },
+    {
+        "port": "COM25",
+        "timestamp": "2024-07-15T11:53:38.022903",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187227",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212653071408",
+            "Get Operator": "IAM",
+            "ICCID": 6156187227
+        }
+    },
+    {
+        "port": "COM23",
+        "timestamp": "2024-07-15T11:53:38.138160",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016136289269",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212769970621",
+            "Get Operator": "IAM",
+            "ICCID": 6136289269
+        }
+    },
+    {
+        "port": "COM30",
+        "timestamp": "2024-07-15T11:53:38.010912",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187359",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "Get Operator": "+COPS: 0",
+            "ICCID": 6156187359
+        }
+    },
+    {
+        "port": "COM34",
+        "timestamp": "2024-07-15T11:53:38.117933",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016136289270",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "Get Operator": "+COPS: 0",
+            "ICCID": 6136289270
+        }
+    },
+    {
+        "port": "COM24",
+        "timestamp": "2024-07-15T11:53:38.138160",
+        "responses": {
+            "Check SIM status": "+CPIN: READY",
+            "Get IMSI": "604016156187261",
+            "Set SMS text mode": "OK",
+            "Get SMS": [],
+            "MSISDN": "212653099925",
+            "Get Operator": "IAM",
+            "ICCID": 6156187261
+        }
+    }
+]
